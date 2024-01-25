@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo layout với RWD</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+
+        .topnav p {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 2px 5px;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        .topnav .logo{
+            font-size: 19px;
+        }
+
+        .topnav .login{
+            float: right;
+        }
+
+        .topnav p:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        .column {
+            float: left;
+            padding: 10px;
+        }
+
+
+        .column.side {
+            width: 25%;
+            background-color: #aaaaaa;
+            height: 550px;
+
+        }
+
+        .column.side p{
+            text-align: center;
+        }
+
+        .column.middle {
+            width: 50%;
+        }
+
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <p class="logo">Logo</p>
+    <p>Home</p>
+    <p>About</p>
+    <p>Projects</p>
+    <p>Contact</p>
+    <p class="login">Login</p>
+</div>
+
+<div class="row">
+    <div class="column side">
+        <p>
+            <a href="#">Link</a>
+        </p>
+        <p>
+            <a href="#">Link</a>
+        </p>
+        <p>
+            <a href="#">Link</a>
+        </p>
+    </div>
+
+    <div class="column middle">
+        <h2>Main Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Footer</p>
+</div>
+</body>
+</html>
